@@ -2,8 +2,8 @@
 @import "font-awesome";
 
 @font-face {
-  font-family: "collegeb";
-  src: url('/assets/collegeb');
+  font-family: "college";
+  src: url('/assets/college');
 }
 .custom-offwhite {
   background-color: black;
@@ -11,5 +11,6 @@
 }
 
 .icon-text {
-  font-family: "collegeb";
+  font-family: "helvetica";
+  font-weight: bold;
 }
