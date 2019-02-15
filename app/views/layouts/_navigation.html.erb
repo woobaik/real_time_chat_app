@@ -8,10 +8,14 @@
     </a>
     <div class="right menu">
     <div class="ui dropdown item">
-      Language <i class="dropdown icon"></i>
+      Account <i class="dropdown icon"></i>
       <div class="menu">
-        <a class="item">English</a>
-        <a class="item">Russian</a>
+        <% if  current_user%>
+          <%= link_to "LOG IN", login_path, class: "item" %>
+          <%= link_to "SIGN UP", root_path, class: "item"  %>
+        <% else %>
+          <%= link_to "LOG OUT", root_path, class: "item" %>
+        <% end %>
         <a class="item">Spanish</a>
       </div>
     </div>
