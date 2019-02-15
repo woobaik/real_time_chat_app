@@ -66,3 +66,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
 
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.4'
+#https://rubygems.org/gems/hirb
+gem 'hirb', '~> 0.7.3'
