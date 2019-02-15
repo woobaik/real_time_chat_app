@@ -10,7 +10,7 @@
     <div class="ui dropdown item">
       Account <i class="dropdown icon"></i>
       <div class="menu">
-        <% if  current_user%>
+        <% if  current_user %>
           <%= link_to "LOG IN", login_path, class: "item" %>
           <%= link_to "SIGN UP", root_path, class: "item"  %>
         <% else %>
