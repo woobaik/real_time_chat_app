@@ -1,0 +1,32 @@
+<div class="ui middle aligned center aligned grid">
+  <div class="column">
+    <h2 class="ui orange image header">
+      <div class="content custom-login-header">
+        <i class="user circle icon big"></i>
+        Sign Up
+      </div>
+    </h2>
+  </div>
+</div>
+
+<div class="ui container">
+  <%= form_for @user, html: {class: "ui form"} do |f|%>
+    <div class="field">
+      <%= f.label :username %>
+      <%= f.text_field :username %>
+    </div>
+    <div class="field">
+      <%= f.label :email %>
+      <%= f.email_field :username %>
+    </div>
+    <div class="field">
+      <%= f.label :password %>
+      <%= f.password_field :password %>
+    </div>
+    <div class="field">
+      <%= f.label :password_confirmation %>
+      <%= f.password_field :password_confirmation %>
+    </div>
+    <%= f.submit "Create Account", class: 'ui orange button'%>
+  <% end %>
+</div>
