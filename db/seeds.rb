@@ -11,4 +11,11 @@
               password: "123456#{user+1}",
               password_confirmation: "123456#{user+1}")
 end
-puts "10 user has created!"
+puts "10 user has been created!"
+
+10.times do |msg|
+  Message.create(body: "Hi, anybody here? Haaapie#{msg}",
+                 user: User.last)
+end
+
+puts "10 msg has been created"
