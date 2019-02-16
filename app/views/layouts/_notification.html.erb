@@ -1,8 +1,10 @@
-<% if flash.any? %>
-  <% flash.each do |key, value| %>
-    <div class="<%= flash_class(key)%>">
-      <i class="close icon"></i>
-      <%= value %>
-    </div>
+<div class="ui container">
+  <% if flash.any? %>
+    <% flash.each do |key, value| %>
+      <div class="<%= flash_class(key)%>">
+        <i class="close icon"></i>
+        <%= value %>
+      </div>
+    <% end %>
   <% end %>
-<% end %>
+</div>
