@@ -10,7 +10,7 @@
 </div>
 
 <div class="ui container">
-  <%= form_for @user, html: {class: "ui form"} do |f|%>
+  <%= form_for @user, html: {class: "ui form", autocomplete: 'on'} do |f|%>
     <div class="field">
       <%= f.label :username %>
       <%= f.text_field :username %>
@@ -21,11 +21,11 @@
     </div>
     <div class="field">
       <%= f.label :password %>
-      <%= f.password_field :password %>
+      <%= f.password_field :password, autocomplete: false %>
     </div>
     <div class="field">
       <%= f.label :password_confirmation %>
-      <%= f.password_field :password_confirmation %>
+      <%= f.password_field :password_confirmation, autocomplete: false %>
     </div>
     <%= f.submit "Create Account", class: 'ui orange button'%>
   <% end %>

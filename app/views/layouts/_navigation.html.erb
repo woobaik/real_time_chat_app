@@ -10,10 +10,10 @@
       <div class="menu">
         <% if  !current_user %>
           <%= link_to "LOG OUT", root_path, class: "item" %>
-          <%= link_to "MY ACCOUNT", root_path, class: "item" %>
+          <%= link_to "MY ACCOUNTs", root_path, class: "item" %>
         <% else %>
-        <%= link_to "LOG IN", login_path, class: "item" %>
-        <%= link_to "SIGN UP", root_path, class: "item"  %>
+          <%= link_to "LOG IN", login_path, class: "item" %>
+          <%= link_to "SIGN UP", root_path, class: "item"  %>
         <% end %>
       </div>
     </div>
