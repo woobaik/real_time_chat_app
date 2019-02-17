@@ -15,6 +15,7 @@ class UsersController < ApplicationController
       flash[:success] = "Thank you for signing up!"
       redirect_to root_path
     else
+      @errors = @user.errors
       flash.now[:error] = "There was something wrong with creating your account!"
       render :new
     end

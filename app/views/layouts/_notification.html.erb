@@ -4,6 +4,13 @@
       <div class="<%= flash_class(key)%>">
         <i class="close icon"></i>
         <%= value %>
+        <% if @errors  %>
+          <ul class="list">
+            <% @errors.full_messages.each do |error| %>
+              <li> <%= error %> </li>
+          <% end %>
+          <ul>
+        <% end %>
       </div>
     <% end %>
   <% end %>
