@@ -13,6 +13,7 @@ class UsersController < ApplicationController
     @user = User.new(users_param)
     if @user.save
       flash[:success] = "Thank you for signing up!"
+      session[:user_id] = @user.user.id
       redirect_to root_path
     else
       @errors = @user.errors
