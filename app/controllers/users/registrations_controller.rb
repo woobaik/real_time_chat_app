@@ -14,7 +14,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
     @user = User.new(user_params)
     if @user.save
       flash[:success] = "Thank you for signing up!"
-      session[:user_id] = @user.id
+      sign_in(@user)
       redirect_to root_path
     else
       @errors = @user.errors
