@@ -8,12 +8,12 @@
     <div class="ui dropdown item">
       Account <i class="dropdown icon"></i>
       <div class="menu">
-        <% if  !current_user %>
-          <%= link_to "LOG OUT", root_path, class: "item" %>
-          <%= link_to "MY ACCOUNTs", root_path, class: "item" %>
+        <% if current_user %>
+          <%= link_to "LOG OUT", destroy_user_session_path, method: :delete, class: "item" %>
+          <%= link_to "MY ACCOUNT", edit_user_registration_path, class: "item" %>
         <% else %>
-          <%= link_to "LOG IN", login_path, class: "item" %>
-          <%= link_to "SIGN UP", root_path, class: "item"  %>
+          <%= link_to "LOG IN", new_user_session_path, class: "item" %>
+          <%= link_to "SIGN UP", new_user_registration_path, class: "item"  %>
         <% end %>
       </div>
     </div>

@@ -1,8 +1,5 @@
 module ApplicationHelper
-  def current_user
-    return 1
-  end
-
+  
   def flash_class(level)
     case level
     when "success" then "ui positive message"
