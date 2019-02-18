@@ -1,6 +1,5 @@
 class UsersController < ApplicationController
 
-  before_action :find_user, only: [:edit, :update, :destroy]
   def index
     @users = User.all
   end
@@ -10,10 +9,10 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(users_param)
+    @user = User.new(user_params)
     if @user.save
       flash[:success] = "Thank you for signing up!"
-      session[:user_id] = @user.user.id
+      session[:user_id] = @user.id
       redirect_to root_path
     else
       @errors = @user.errors
@@ -27,7 +26,7 @@ class UsersController < ApplicationController
   end
 
   def update
-    if @user.update(users_param)
+    if @user.update(user_params)
       flash[:success] = "Your account information has updated!"
     else
       flash[:error] = "There was something wrong with updating your account!"
@@ -41,7 +40,7 @@ class UsersController < ApplicationController
 
   private
 
-  def users_param
+  def user_params
     params.require(:user).permit(:username, :email, :password, :password_confirmation)
   end
 
