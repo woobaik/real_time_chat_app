@@ -1,12 +1,3 @@
-<div class="ui middle aligned center aligned grid">
-  <div class="column">
-    <h2 class="ui orange image header">
-      <div class="content custom-login-header">
-        <i class="user circle icon big"></i>
-        Sign Up
-      </div>
-    </h2>
-  </div>
-</div>
-
+<%= render partial: 'devise/shared/signup_edit_header', locals: { title: "Sign Up"} %>
+<%= render 'layouts/notification' %>
 <%= render partial: 'devise/shared/registration' %>
