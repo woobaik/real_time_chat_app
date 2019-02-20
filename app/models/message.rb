@@ -3,5 +3,5 @@ class Message < ApplicationRecord
   validates :body, presence: true, length: { minimum: 1, maximum: 255}
   validates_presence_of :user
 
-  scope :custom_display, -> { order(:created_at).last(17)}
+  scope :custom_display, -> { order(:created_at).last(15)}
 end

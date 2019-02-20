@@ -17,9 +17,16 @@
 //= require semantic-ui
 //= require_tree .
 
+message_scroll = function() {
+  if ($('#chatroom-container').length > 0)  {
+    $('#chatroom-container').scrollTop($('#chatroom-container')[0].scrollHeight);
+  }
+}
+
 $(document).on('turbolinks:load', function() {
   $('.ui.dropdown').dropdown();
   $('.message .close').on('click', function() {
     $(this).closest('.message').transition('fade');
   })
+  message_scroll();
 })
