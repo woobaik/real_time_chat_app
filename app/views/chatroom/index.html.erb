@@ -3,6 +3,8 @@
   <span class="icon-text">OFF WHITE CHAT<span>
 </h2>
 
+<%= render 'layouts/notification' %>
+
 <div class="container chat-layout">
   <div class="ui grid">
     <div class="twelve wide column">
@@ -13,14 +15,14 @@
           </div>
         </div>
         <div class="extra content fluid">
-          <form action="" class="ui reply form">
+          <%= form_for @message, html: {class: "ui reply form"}, url: message_path do |f| %>
             <div class="field">
               <div class="ui fluid icon input">
-                <input type="text" placeholder="Enter Message">
-                <i class="bordered inverted orange edit icon"></i>
+                <%= f.text_field :body%>
+                <%= f.button ("<i class='bordered inverted orange edit icon'></i>").html_safe %>
               </div>
             </div>
-          </form>
+          <% end %>
         </div>
       </div>
     </div>
