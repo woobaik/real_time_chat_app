@@ -6,5 +6,6 @@ Rails.application.routes.draw do
               controllers: { registrations: 'users/registrations'}
 
   root 'chatroom#index'
+
   post 'message', to: 'messages#create'
 end
