@@ -23,10 +23,21 @@ message_scroll = function() {
   }
 }
 
+submit_message = function() {
+  $('#message_body').on('keydown', function(e) {
+    if (e.which == 13) {
+      $('button').click();
+      e.target.value = '';
+    }
+  })
+}
+
+
 $(document).on('turbolinks:load', function() {
   $('.ui.dropdown').dropdown();
   $('.message .close').on('click', function() {
     $(this).closest('.message').transition('fade');
-  })
+  });
   message_scroll();
+  submit_message()
 })
